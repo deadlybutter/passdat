@@ -33,3 +33,46 @@
     background-color: $white;
   }
 }
+
+.modal {
+  background-color: $max-blue-green;
+  color: $white;
+  text-align: center;
+
+  &.-vertical * {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  h1 {
+    @include megaFont();
+  }
+
+  p {
+    @include standardFont();
+  }
+
+  button[type="submit"] {
+    background-color: $bright-cerulean;
+    color: $white;
+  }
+
+  .modal__field {
+    margin: $static-spacing 0;
+
+    input {
+      padding: $static-spacing 0;
+      background-color: $white;
+      color: $max-blue-green;
+
+      &::-webkit-input-placeholder {
+        color: $pale-turquoise;
+      }
+    }
+
+    p {
+      margin: $static-spacing / 4 0;
+    }
+  }
+}

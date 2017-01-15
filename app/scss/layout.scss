@@ -5,6 +5,11 @@
 .container {
   width: 100%;
   display: block;
+
+  &.-fullscreen {
+    position: absolute;
+    min-height: 100%;
+  }
 }
 
 .wrapper {

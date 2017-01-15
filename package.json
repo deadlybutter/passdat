@@ -4,8 +4,8 @@
   "description": "Password manager",
   "main": "app.js",
   "scripts": {
-    "start": "foreman start",
-    "start-dev": "foreman start -f DevProcfile",
+    "start": "heroku local",
+    "start-dev": "heroku local --procfile DevProcfile",
     "postinstall": "npm run build",
     "build": "webpack -p --progress --colors",
     "build-dev": "webpack --inline --progress --colors --watch",
