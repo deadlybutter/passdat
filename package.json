@@ -1,7 +1,7 @@
 {
-  "name": "unknown",
+  "name": "passdat",
   "version": "1.0.0",
-  "description": "Ssshhhh",
+  "description": "Password manager",
   "main": "app.js",
   "scripts": {
     "start": "foreman start",

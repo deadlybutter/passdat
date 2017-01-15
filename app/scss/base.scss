@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+$break-small: 425px;
+$max-width: 768px;
+
+$responsive-spacing: 2%;
+$static-spacing: 16px;
+
+$white: #FFF;
+$white-smoke: #F4F4F4;
+$black: #191919;
+
+$max-blue-green: #2EDDBB;
+$medium-aquamarine: #66DFC6;
+$aquamarine: #82EAD3;
+$pale-turquoise: #B3FCE9;
+$bright-cerulean: #2EA8DD;
+/* https://coolors.co/2eddbb-66dfc6-82ead3-b3fce9-2ea8dd */
+
+$font-heavy: 800;
+
+@mixin standardFont() {
+  font-size: 4vmin;
+
+  @media screen and (min-width: $max-width) {
+    font-size: 2.5vmin;
+  }
+}
+
+@mixin largeFont() {
+  font-size: 6vmin;
+
+  @media screen and (min-width: $max-width) {
+    font-size: 4.5vmin;
+  }
+}
+
+html, body {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: $black;
+  background: $white-smoke;
+}
+
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  @include standardFont();
+  font-weight: $font-heavy;
+}
+
+button {
+  display: block;
+  margin: auto;
+  padding: $static-spacing;
+  width: 100%;
+  @include standardFont();
+  font-weight: $font-heavy;
+  font-family: 'Montserrat', sans-serif;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.-default {
+    color: $white;
+    background-color: $max-blue-green;
+  }
+}
+
+input[type="search"] {
+  display: block;
+  width: 100%;
+  padding: $static-spacing;
+  background-color: $max-blue-green;
+  border: none;
+  color: $white;
+  @include standardFont();
+  font-weight: $font-heavy;
+  font-family: 'Montserrat', sans-serif;
+
+  &::-webkit-input-placeholder {
+    color: $white-smoke;
+  }
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

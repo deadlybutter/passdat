@@ -4,4 +4,13 @@ import { Router, Route, IndexRoute, Link, browserHistory } from 'react-router';
 
 import style from '../scss/main.scss';
 
-render((<h1>Test</h1>), document.getElementById('root'));
+import Page from './screens/Page';
+import Dashboard from './screens/Dashboard';
+
+render((
+  <Router history={browserHistory}>
+    <Route path="/" component={Page}>
+      <IndexRoute component={Dashboard} />
+    </Route>
+  </Router>
+), document.getElementById('root'));

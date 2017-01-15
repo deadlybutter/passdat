@@ -1,0 +1,35 @@
+.card {
+  background-color: $max-blue-green;
+  color: $white;
+  text-align: center;
+  margin: $responsive-spacing * 4 0;
+
+  h1 {
+    padding: $static-spacing;
+    @include largeFont();
+  }
+
+  .card__fields {
+    text-align: left;
+    margin-bottom: $static-spacing;
+
+    @media screen and (min-width: $max-width) {
+      margin-bottom: $static-spacing * 2;
+    }
+
+    button {
+      width: 40%;
+      display: inline-block;
+      margin-left: 7%;
+      color: $white;
+      background-color: $bright-cerulean;
+      padding: $static-spacing * 2 0;
+    }
+  }
+
+  .card__edit {
+    padding: $static-spacing / 2;
+    color: $bright-cerulean;
+    background-color: $white;
+  }
+}

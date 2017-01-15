@@ -1,0 +1,52 @@
+.-spacing {
+  margin: $responsive-spacing 0;
+}
+
+.container {
+  width: 100%;
+  display: block;
+}
+
+.wrapper {
+  max-width: $max-width;
+  margin: auto;
+  display: block;
+
+  @media screen and (max-width: $max-width) {
+    padding: 0 $responsive-spacing;
+  }
+
+  &.-full {
+    padding: 0;
+  }
+}
+
+header {
+  .header__banner {
+    text-align: center;
+    padding: $static-spacing / 2;
+    background: $bright-cerulean;
+    color: $white;
+  }
+
+  .header__menu {
+    display: inline-block;
+    width: 33.3%;
+    text-align: center;
+    background: $pale-turquoise;
+    color: $max-blue-green;
+
+    h1 {
+      padding: $static-spacing / 2;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &.-active {
+      color: $white;
+      background: $medium-aquamarine;
+    }
+  }
+}
